@@ -1,10 +1,12 @@
 import React from "react";
 import Login from "./components/Auth/Login";
+import EmployeeDashboard from "./components/DashBoard/EmployeeDashboard";
 
 const App = () =>{
   return(
     <div>
-        < Login />
+        {/* < Login /> */}
+        < EmployeeDashboard />
     </div>
   )
 
