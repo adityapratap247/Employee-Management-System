@@ -14,7 +14,7 @@ let TaskList = () =>{
                 </p>
             </div>
 
-     <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#78927A] rounded-xl">
+     <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#6F8585] rounded-xl">
             <div className="flex justify-between items-center">
                 <h3 className="bg-red-600 text-sm py-1 px-3">High </h3>
                 <h4 className="text-sm">30 September 2026</h4>
@@ -24,7 +24,7 @@ let TaskList = () =>{
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deserunt reprehenderit incidunt voluptate, veniam amet magni sed debitis pariatur dolores, ad laudantium nesciunt, libero voluptatem ab odit. Molestiae, optio fuga.
                 </p>
             </div>
-             <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#78927A] rounded-xl">
+             <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#B89B4A] rounded-xl">
             <div className="flex justify-between items-center">
                 <h3 className="bg-red-600 text-sm py-1 px-3">High </h3>
                 <h4 className="text-sm">30 September 2026</h4>
@@ -34,7 +34,7 @@ let TaskList = () =>{
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deserunt reprehenderit incidunt voluptate, veniam amet magni sed debitis pariatur dolores, ad laudantium nesciunt, libero voluptatem ab odit. Molestiae, optio fuga.
                 </p>
             </div>
- <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#78927A] rounded-xl">
+ <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#77746B] rounded-xl">
             <div className="flex justify-between items-center">
                 <h3 className="bg-red-600 text-sm py-1 px-3">High </h3>
                 <h4 className="text-sm">30 September 2026</h4>
@@ -44,7 +44,7 @@ let TaskList = () =>{
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deserunt reprehenderit incidunt voluptate, veniam amet magni sed debitis pariatur dolores, ad laudantium nesciunt, libero voluptatem ab odit. Molestiae, optio fuga.
                 </p>
             </div>
-             <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#78927A] rounded-xl">
+             <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-[#8FAF8F] rounded-xl">
             <div className="flex justify-between items-center">
                 <h3 className="bg-red-600 text-sm py-1 px-3">High </h3>
                 <h4 className="text-sm">30 September 2026</h4>

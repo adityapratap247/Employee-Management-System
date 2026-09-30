@@ -1,16 +1,8 @@
 import React from "react";
-import Header from "../Other/Header";
-import CreateTask from "../Other/CreateTask";
 
-let AdminDashBoard = () =>{
-    const inputStyle = "bg-white text-black text-lg px-2 py-1 w-72 outline-none placeholder:text-gray-400"
-
+let CreateTask = () =>{
     return(
-        <div className="h-screen w-full p-7">
-            < Header />
-            < CreateTask />
-
-            {/* <div className="p-5 bg-[#1c1c1c] mt-7 rounded ">
+         <div className="p-5 bg-[#1c1c1c] mt-7 rounded ">
                 
                 <form className="flex flex-wrap w-full items-start justify-between">
                     <div className="w-1/2">
@@ -40,9 +32,8 @@ let AdminDashBoard = () =>{
                     
                  
                 </form>
-            </div> */}
-        </div>
-    );
+            </div>
+    )
 };
 
-export default AdminDashBoard;
+export default CreateTask;
