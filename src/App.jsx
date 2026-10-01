@@ -6,7 +6,7 @@ import AdminDashBoard from "./components/DashBoard/AdminDashBoard";
 const App = () =>{
   return(
     <div>
-        {/* < Login /> */}
+        < Login />
         {/* < EmployeeDashboard /> */}
         {/* < AdminDashBoard /> */}
     </div>
