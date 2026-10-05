@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/DashBoard/EmployeeDashboard";
 import AdminDashBoard from "./components/DashBoard/AdminDashBoard";
@@ -8,6 +8,15 @@ const App = () =>{
 
   const [user, setUser] = useState(null);
   const authData = useContext(AuthContext);
+
+  // useEffect(() => {
+  //   if(authData){
+  //     const loggedInUser = localStorage.getItem("loggedInUser")
+  //     if(loggedInUser){
+  //       setUser(loggedInUser.role)
+  //     }
+  //   }
+  // },[authData]);
 
   const handleLogin = (email,password) =>{
       if (authData?.admins?.find((admin) => email === admin.email && password === admin.password)) {
