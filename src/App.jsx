@@ -20,9 +20,12 @@ const App = () =>{
 
   const handleLogin = (email,password) =>{
       if (authData?.admins?.find((admin) => email === admin.email && password === admin.password)) {
-        setUser('admin');
-      }else if (authData?.employees?.find((employee) => email === employee.email && password === employee.password)) {
-        setUser('employee');
+        setUser({role: 'admin'});
+      }else if (authData) {
+        const employee = authData.employee.find((employee) => email === employee.email && password === employee.password)
+          if(employee){
+            setUser({ role:employee });
+          }
       }else{
         alert("Invalid credentials");
       }
