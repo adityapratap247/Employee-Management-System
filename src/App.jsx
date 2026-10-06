@@ -7,6 +7,7 @@ import { AuthContext } from "./context/AuthProvider";
 const App = () =>{
 
   const [user, setUser] = useState(null);
+  const [loggedInUserData, setLoggedInUserData] = useState(null);
   const authData = useContext(AuthContext);
 
   // useEffect(() => {
@@ -20,11 +21,14 @@ const App = () =>{
 
   const handleLogin = (email,password) =>{
       if (authData?.admins?.find((admin) => email === admin.email && password === admin.password)) {
-        setUser({role: 'admin'});
+        setUser('admin')
+        localStorage.setItem('LoggedInUser',JSON .stringify({role: 'admin'}))
       }else if (authData) {
         const employee = authData.employee.find((employee) => email === employee.email && password === employee.password)
           if(employee){
-            setUser({ role:employee });
+            setUser(employee);
+            setLoggedInUserData(employee);
+            localStorage.setItem('loggedInUser',JSON.stringify({role: 'employees'}))
           }
       }else{
         alert("Invalid credentials");
