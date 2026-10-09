@@ -1,8 +1,14 @@
 import React from "react";
+import AcceptTask from "./AcceptTask";
+import NewTask from "./NewTask";
 
 const TaskList = ({ data }) => {
     return (
         <div id="tasklist" className="h-[55%] overflow-x-auto flex items-center justify-start gap-5 flex-nowrap w-full mt-10">
+            <AcceptTask />
+            <NewTask />
+            <CompleteTask />
+            <FailedTask />
             {data?.tasks && data.tasks.length > 0 ? (
                 data.tasks.map((elem, idx) => (
                     <div key={idx} className="flex-shrink-0 h-full p-5 w-[300px] bg-[#6F8585] rounded-xl flex flex-col justify-between">
