@@ -1,11 +1,15 @@
+localStorage.clear()
+
 const employee = [
   {
     id: 1,
+    firstName: "Aarav",
     username: "employee1",
     email: "employee1@gmail.com",
     password: "123",
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: true,
         completed: false,
@@ -16,6 +20,7 @@ const employee = [
         category: "Design"
       },
       {
+        taskNumber: 2,
         active: true,
         newTask: false,
         completed: false,
@@ -26,6 +31,7 @@ const employee = [
         category: "Development"
       },
       {
+        taskNumber: 3,
         active: false,
         newTask: false,
         completed: true,
@@ -36,6 +42,7 @@ const employee = [
         category: "Documentation"
       },
       {
+        taskNumber: 4,
         active: false,
         newTask: false,
         completed: false,
@@ -46,6 +53,7 @@ const employee = [
         category: "Deployment"
       },
       {
+        taskNumber: 5,
         active: true,
         newTask: true,
         completed: false,
@@ -60,11 +68,13 @@ const employee = [
 
   {
     id: 2,
+    firstName: "Priya",
     username: "employee2",
     email: "employee2@gmail.com",
     password: "123",
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: true,
         completed: false,
@@ -75,6 +85,7 @@ const employee = [
         category: "Development"
       },
       {
+        taskNumber: 2,
         active: true,
         newTask: false,
         completed: false,
@@ -85,6 +96,7 @@ const employee = [
         category: "API"
       },
       {
+        taskNumber: 3,
         active: false,
         newTask: false,
         completed: true,
@@ -95,6 +107,7 @@ const employee = [
         category: "Database"
       },
       {
+        taskNumber: 4,
         active: false,
         newTask: false,
         completed: true,
@@ -105,6 +118,7 @@ const employee = [
         category: "Testing"
       },
       {
+        taskNumber: 5,
         active: false,
         newTask: false,
         completed: false,
@@ -119,11 +133,13 @@ const employee = [
 
   {
     id: 3,
+    firstName: "Rohan",
     username: "employee3",
     email: "employee3@gmail.com",
     password: "123",
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: true,
         completed: false,
@@ -134,6 +150,7 @@ const employee = [
         category: "Frontend"
       },
       {
+        taskNumber: 2,
         active: true,
         newTask: false,
         completed: false,
@@ -144,6 +161,7 @@ const employee = [
         category: "Development"
       },
       {
+        taskNumber: 3,
         active: false,
         newTask: false,
         completed: true,
@@ -154,6 +172,7 @@ const employee = [
         category: "Maintenance"
       },
       {
+        taskNumber: 4,
         active: false,
         newTask: false,
         completed: true,
@@ -164,6 +183,7 @@ const employee = [
         category: "Testing"
       },
       {
+        taskNumber: 5,
         active: false,
         newTask: false,
         completed: false,
@@ -178,11 +198,13 @@ const employee = [
 
   {
     id: 4,
+    firstName: "Ananya",
     username: "employee4",
     email: "employee4@gmail.com",
     password: "123",
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: true,
         completed: false,
@@ -193,6 +215,7 @@ const employee = [
         category: "Frontend"
       },
       {
+        taskNumber: 2,
         active: true,
         newTask: false,
         completed: false,
@@ -203,6 +226,7 @@ const employee = [
         category: "Development"
       },
       {
+        taskNumber: 3,
         active: false,
         newTask: false,
         completed: true,
@@ -213,6 +237,7 @@ const employee = [
         category: "UI/UX"
       },
       {
+        taskNumber: 4,
         active: false,
         newTask: false,
         completed: true,
@@ -223,6 +248,7 @@ const employee = [
         category: "Code Review"
       },
       {
+        taskNumber: 5,
         active: false,
         newTask: false,
         completed: false,
@@ -237,11 +263,13 @@ const employee = [
 
   {
     id: 5,
+    firstName: "Vikram",
     username: "employee5",
     email: "employee5@gmail.com",
     password: "123",
     tasks: [
       {
+        taskNumber: 1,
         active: true,
         newTask: true,
         completed: false,
@@ -252,6 +280,7 @@ const employee = [
         category: "Development"
       },
       {
+        taskNumber: 2,
         active: true,
         newTask: false,
         completed: false,
@@ -262,6 +291,7 @@ const employee = [
         category: "Development"
       },
       {
+        taskNumber: 3,
         active: false,
         newTask: false,
         completed: true,
@@ -272,6 +302,7 @@ const employee = [
         category: "Setup"
       },
       {
+        taskNumber: 4,
         active: false,
         newTask: false,
         completed: true,
@@ -282,6 +313,7 @@ const employee = [
         category: "Testing"
       },
       {
+        taskNumber: 5,
         active: false,
         newTask: false,
         completed: false,
@@ -295,11 +327,10 @@ const employee = [
   }
 ];
 
-
-
 const admin = [
   {
     id: 6,
+    firstName: "Aditya",
     username: "admin",
     email: "admin@gmail.com",
     password: "123"

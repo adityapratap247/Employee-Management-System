@@ -15,7 +15,7 @@ const Header = (props) => {
             <h1 className="text-2xl">
                 Hello <br />
                 <span className="text-3xl font-semibold">
-                    {props.data?.username || "Admin"}
+                    {props.data?.firstName || "Admin"}
                 </span> 👋🏻
             </h1>
             <button
