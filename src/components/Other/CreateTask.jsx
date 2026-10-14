@@ -11,15 +11,26 @@ const CreateTask = () => {
     const [task,setTask] = useState([]);
 
     const SubmitHandler = (e) => {
-    e.preventDefault();
-  
-    setTask({taskTitle,taskDescription,taskDate,category,AsignTo,active:false,newTask:true,failed:true,completed:false})};
+        e.preventDefault();
 
-    const data = JSON.parse(localStorage.getItem('employee'))
+        setTask({ taskTitle, taskDescription, taskDate, category, AsignTo, active: false, newTask: true, failed: false, completed: false });
 
-    
+        const data = JSON.parse(localStorage.getItem('employee')) || [];
 
-    console.log(data);
+        data.forEach(function (elem) {
+            if (AsignTo === elem.firstName) {
+                console.log(elem.tasks);
+            }
+        });
+
+        console.log(data);
+
+        setTaskTitle('');
+        setTaskDescription('');
+        setTaskDate('');
+        setCategory('');
+        setAsignTo('');
+    };
 
     return (
         <div className="p-5 bg-[#1c1c1c] mt-7 rounded">
