@@ -8,18 +8,20 @@ const CreateTask = () => {
     const [category, setCategory] = useState('');
     const [AsignTo, setAsignTo] = useState('');
 
-    const [task,setTask] = useState([]);
+    const [newTask,setNewTask] = useState([]);
 
     const SubmitHandler = (e) => {
         e.preventDefault();
 
-        setTask({ taskTitle, taskDescription, taskDate, category, AsignTo, active: false, newTask: true, failed: false, completed: false });
+        setNewTask({ taskTitle, taskDescription, taskDate, category, AsignTo, active: false, newTask: true, failed: false, completed: false });
 
         const data = JSON.parse(localStorage.getItem('employee')) || [];
 
         data.forEach(function (elem) {
             if (AsignTo === elem.firstName) {
-                console.log(elem.tasks);
+                elem.tasks.push(newTask);
+
+                console.log(elem);
             }
         });
 
