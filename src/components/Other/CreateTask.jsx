@@ -8,9 +8,12 @@ const CreateTask = () => {
     const [category, setCategory] = useState('');
     const [AsignTo, setAsignTo] = useState('');
 
+    const [task,setTask] = useState([]);
+
     const SubmitHandler = (e) => {
-  e.preventDefault();
-  console.log('Task Created', { taskTitle, taskDescription });
+    e.preventDefault();
+  
+    setTask()
 };
 
     return (
