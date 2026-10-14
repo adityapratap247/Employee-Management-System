@@ -13,8 +13,13 @@ const CreateTask = () => {
     const SubmitHandler = (e) => {
     e.preventDefault();
   
-    setTask()
-};
+    setTask({taskTitle,taskDescription,taskDate,category,AsignTo,active:false,newTask:true,failed:true,completed:false})};
+
+    const data = JSON.parse(localStorage.getItem('employee'))
+
+    
+
+    console.log(data);
 
     return (
         <div className="p-5 bg-[#1c1c1c] mt-7 rounded">
