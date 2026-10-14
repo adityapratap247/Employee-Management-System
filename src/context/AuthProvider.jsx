@@ -18,13 +18,19 @@ const AuthProvider = ({children}) => {
         setUserData({ employees, admins });
     }, []);
 
-    return(
+    const contextValue = [userData, setUserData];
+    contextValue.employees = userData?.employees;
+    contextValue.admins = userData?.admins;
+    contextValue.userData = userData;
+    contextValue.setUserData = setUserData;
+
+    return (
         <div>
-            <AuthContext.Provider value={userData} >
+            <AuthContext.Provider value={contextValue}>
                 {children}
             </AuthContext.Provider>
         </div>
-    )
+    );
 };
 
 export default AuthProvider;

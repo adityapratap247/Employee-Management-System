@@ -1,4 +1,4 @@
-localStorage.clear()
+// localStorage.clear()
 
 const employee = [
   {
@@ -7,6 +7,12 @@ const employee = [
     username: "employee1",
     email: "employee1@gmail.com",
     password: "123",
+    taskCounts: {
+      active: 3,
+      newTask: 2,
+      completed: 1,
+      failed: 1
+    },
     tasks: [
       {
         taskNumber: 1,
@@ -72,6 +78,12 @@ const employee = [
     username: "employee2",
     email: "employee2@gmail.com",
     password: "123",
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 2,
+      failed: 1
+    },
     tasks: [
       {
         taskNumber: 1,
@@ -137,6 +149,12 @@ const employee = [
     username: "employee3",
     email: "employee3@gmail.com",
     password: "123",
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 2,
+      failed: 1
+    },
     tasks: [
       {
         taskNumber: 1,
@@ -202,6 +220,12 @@ const employee = [
     username: "employee4",
     email: "employee4@gmail.com",
     password: "123",
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 2,
+      failed: 1
+    },
     tasks: [
       {
         taskNumber: 1,
@@ -267,6 +291,12 @@ const employee = [
     username: "employee5",
     email: "employee5@gmail.com",
     password: "123",
+    taskCounts: {
+      active: 2,
+      newTask: 1,
+      completed: 2,
+      failed: 1
+    },
     tasks: [
       {
         taskNumber: 1,
@@ -343,8 +373,22 @@ export const SetLocalStorage = () => {
 };
 
 export const GetLocalStorage = () => {
-  const employees = JSON.parse(localStorage.getItem("employee"));
+  let employees = JSON.parse(localStorage.getItem("employee"));
   const admins = JSON.parse(localStorage.getItem("admin"));
+
+  if (employees && Array.isArray(employees)) {
+    employees = employees.map((emp) => {
+      if (!emp.taskCounts && emp.tasks) {
+        emp.taskCounts = {
+          active: emp.tasks.filter((t) => t.active).length,
+          newTask: emp.tasks.filter((t) => t.newTask).length,
+          completed: emp.tasks.filter((t) => t.completed).length,
+          failed: emp.tasks.filter((t) => t.failed).length,
+        };
+      }
+      return emp;
+    });
+  }
 
   return { employees, admins };
 };
